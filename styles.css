@@ -9,8 +9,6 @@
 }
 
 *{
-    margin: 0;
-    padding: 0;
     font-family: Proxima;
     font-weight: 100;
 }
@@ -21,7 +19,14 @@ a{
     color: rgb(54, 54, 54);
 }
 
+body{
+    padding: 0;
+    margin: 0;
+}
+
 #navList{
+    padding: 0;
+    margin: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -38,22 +43,34 @@ a{
 }
 
 #navButton{
-    height: 35px;
+    height: 20px;
 }
 
 #searchBar{
     height: 40px;
-    width: 200px;
-    border-radius: 40px;
+    width: 100px;
+    border-radius:20px;
     font-family: Proxima Nova Light;
 }
 
+#navBar{
+    background-color: #393e46;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+
 #logo{
-    height: 80px;
+    height: 40px;
 }
 
 #main{
-    padding-top: 80px;
+    padding-top: 20px;
     justify-content: center;
 }
 
@@ -68,17 +85,26 @@ a{
 }
 
 #card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     font-family: Proxima Nova Light;
     margin: 10px;
     padding: 10px;
     border-radius: 40px;
     background-color: #f7f7f7;
-    height: 300px;
-    width: 200px;
+    height: 180px;
+    width: 130px;
+}
+
+#card h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+
+#card h3{
+    font-size: 15px;
+    margin: 0;
+    color: red;
 }
 
 #card:hover{
@@ -88,51 +114,14 @@ a{
 }
 
 #productImage{
-    height: 130px;
+    height: 70px;
     border-radius: 30px;
 }
 
-#productBar{
-    width: 100%;
-}
-
-#productBarList{    
-    padding-top: 10px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 18px;
-    z-index: 1;
-    padding: 10px;
-}
-
-#productBarItem{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #c5c5c5;
-    height: 30px;
-    width: 80px;
-}
-
-
-
-
-
-#interface{
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 50px;
-    background-color: blue;
-}
 
 
 #addCart{
-    height: 30px;
+    height: 20px;
     border-radius: 30px;
     border: none;
     background-color: #393e46;
@@ -144,7 +133,7 @@ a{
     background-color: #860000;
 }
 #buyNow{
-    height: 40px;
+    height: 30px;
     border-radius: 30px;
     border: none;
     background-color: #6d9886;
@@ -156,7 +145,75 @@ a{
     background-color: #000dbd;
 }
 
+#login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+    position: fixed;
+}
 
+#form{
+    
+    background-color: rgb(109, 152, 134, 0.8);
+    border-radius: 40px;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+}
+
+#password{
+    width: 100px;
+}
+
+#closeWindow{
+    float: right;
+    margin: 10px;
+}
+
+.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navIcon{
+    background-color: transparent;
+    border: none;
+}
+
+#cart-container{
+    background-color: rgb(128, 128, 128, 0.5);
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-height: 500px;
+    height: 500px;
+    overflow-y: scroll;
+    width: 700px;
+    margin: 50px;
+    background-color: rgb(245, 255, 221);
+    border-radius: 40px;
+    border: 1px solid #0a0a0a;
+}
+
+#cart button{
+    margin-left: auto;
+}
+
+#cart h2{
+    margin-right: auto;
+}
 
 @media screen and (min-width: 800px){
     #navList{
