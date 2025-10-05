@@ -22,17 +22,17 @@
         <div id="login">
             <div id="form">
                 <button id="closeWindow" onclick="toggleLogin()">X</button>
-
+                <h1>Login</h1>
                 <form id="loginForm" type="loginForm">
-                    <h1>Login</h1>
+                    
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email">
                     <label for="password">Password:</label>
-                    <input type="text" id="password" name="password">
-                    <button id="loginButton"> LOGIN</button>
-                </form>
-                <br>
-                    <button id="register"> REGISTER </button>    
+                    <input type="password" id="password" name="password">
+                    <button id="loginButton" type="submit"> LOGIN</button>
+                    <button id="register"> REGISTER </button>
+                    <p id="authMsg"></p>
+                    </form>    
             </div>
         </div>
         
@@ -45,6 +45,30 @@
         </div>
 
         <div id="contents">
+            <div id="card">
+                <img src="assets/img/shoes/nike/NikeDunkLow.webp" alt="NikeDunkLow" id="productImage">
+                <h2>Nike Low Dunk Panda </h2>
+                <h3><i>5,895 PHP</i></h3>
+                <button onclick="addToCart()" id="addCart">Add to Cart</button>
+                <button id="buyNow"> Buy Now!</button>
+            </div>
+
+            <div id="card">
+                <img src="assets/img/shoes/nike/NikeDunkLow.webp" alt="NikeDunkLow" id="productImage">
+                <h2>Nike Low Dunk Panda </h2>
+                <h3><i>5,895 PHP</i></h3>
+                <button onclick="addToCart()" id="addCart">Add to Cart</button>
+                <button id="buyNow"> Buy Now!</button>
+            </div>
+
+            <div id="card">
+                <img src="assets/img/shoes/nike/NikeDunkLow.webp" alt="NikeDunkLow" id="productImage">
+                <h2>Nike Low Dunk Panda </h2>
+                <h3><i>5,895 PHP</i></h3>
+                <button onclick="addToCart()" id="addCart">Add to Cart</button>
+                <button id="buyNow"> Buy Now!</button>
+            </div>
+
             <div id="card">
                 <img src="assets/img/shoes/nike/NikeDunkLow.webp" alt="NikeDunkLow" id="productImage">
                 <h2>Nike Low Dunk Panda </h2>

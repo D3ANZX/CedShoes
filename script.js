@@ -1,5 +1,6 @@
 
 
+
 document.addEventListener('DOMContentLoaded', () =>{
     const form = document.getElementById('loginForm');
     const emailInput = document.getElementById('email');
@@ -8,15 +9,17 @@ document.addEventListener('DOMContentLoaded', () =>{
     const VALID_EMAIL = 'gasdean@gmail.com';
     const VALID_PASS = 'password';
 
-    form.addEventListener('loginButton', function(event){
+    form.addEventListener('submit', function(event){
         event.preventDefault();
 
         const enteredEmail = emailInput.value.trim();
         const enteredPassword = passwordInput.value.trim();
 
         if(enteredEmail === VALID_EMAIL && enteredPassword === VALID_PASS){
+            loggedIn();
             console.log("successfully logged in!");
         } else {
+            document.getElementById('authMsg').innerHTML = 'Login failed, invalid username or password';
             console.log("Login failed");
         }
 
@@ -26,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 });
 
+function loggedIn(){
+    document.querySelector('#login h1').innerHTML = 'Florentino Dean P. Gas';
+    loginForm = document.getElementById('loginForm');
+    loginForm.remove();
+}
+
 function addToCart(){
     item = document.getElementById('card');
     container = document.getElementById('cart');
@@ -33,11 +42,13 @@ function addToCart(){
 
     if(container){
         console.log("Adding to cart");
-        container.appendChild(cartItem);
+        container.append(cartItem);
     } else {
         console.log("Error");
     }
 }
+
+
 
 function toggleLogin(){
     const loginOverlay = document.getElementById('login');
